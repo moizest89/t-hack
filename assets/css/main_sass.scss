@@ -61,3 +61,48 @@ section#form_login{
 		}
 	}
 }
+
+article#property_services_1{
+	h1.text{
+		width:100%;
+		text-align:center;
+		display:block;
+		color:#FFF;
+		font-size:37px;
+		font-weight:bold;
+		margin:65px 0 0 ;
+	}
+	p.text{
+		width:100%;
+		text-align:center;
+		display:block;
+		color:#FFF;
+		font-size:30px;
+		margin:25px 0 0 0;
+		font-weight:bold;
+		line-height:39px;
+	}
+	input[type="text"]{
+		padding:6px 0;
+		text-indent:15px;
+		@include rounded(4px);
+		border:3px solid #FDB93F;
+		font-size:22px;
+		width:95%;
+	}
+	input[type="submit"]{
+		padding:6px 0;
+		@include rounded(4px);
+		border:3px solid #FDB93F;
+		text-align:center;
+		background:#FDB93F;
+		color:#FFF;
+		font-size:37px;
+		font-weight:bold;
+		font-size:19px;
+		width:30%;
+		display:block;
+		cursor:pointer;
+		margin:40px auto;
+	}
+}
