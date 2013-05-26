@@ -15,9 +15,151 @@
 </head>
 
 <body class="app">
-    <section id="layout" data-transition="slide" ng-controller="LoginControl">  
-        <header data-title="Tostón APP"></header>
-        <article id="main-page" class="active list indented scroll" ng-controller="LoginControl">
+    <section id="layout" data-transition="slide" ng-controller="LoginControl">
+        <header style="text-align: center;"><img src="assets/img/toston-solo-texto.png" height="24px" alt=""></header>
+        <article id="main-page" class="active list indented scroll" class="active">
+            <span id="page_center">
+                <section id="form_login">
+                    <img src="assets/images/logo-vertical-toston-app.png" class="logo_app">
+                    <form>
+                        <input type="text" placeholder="Usuario">
+                        <input type="password" placeholder="Contrasena">
+                        <input type="submit" value="Iniciar Sesion">
+                    </form>
+                </section>
+            </span>
+        </article>    
+        <!-- Article de Crédito -->
+        <article id="layout-art1" class="scroll">
+            <h4 class="saldo"><img src="assets/img/moneda.png" alt="moneda"> <span>4.25</span></h4>
+            <h2 class="segundo_nivel">Cuotas Próximas a Vencimiento</h2>
+            <hr style="background: #fff; height: 0.2em;">
+            <div class="labels">
+                <label class="label-progress">Préstamo Casa</label>
+                <label class="label-progress label-right">Restante</label>
+            </div>
+            <a href="#layout-art-pago-a-cliente" data-router="article" title="Pagar a Fondo Social para la Vivienda $60.00">
+                <div class="datos-clientes">
+                    <label>Fondo Social para la Vivienda</label>
+                    <label class="label-right">$60.00 [50%]</label>
+                </div>
+                <form data-progress="50%">
+                    <div class="progress"></div>
+                </form>
+                <label class="fecha-limite">Fecha límite de pago: Lunes, 27 de mayo de 2013</label>
+            </a>
+            <hr style="background: #fff; height: 0.2em;">
+            <div class="labels">
+                <label class="label-progress">Préstamo Carro</label>
+                <label class="label-progress label-right">Restante</label>
+            </div>
+            <a href="#layout-art-pago-a-cliente" data-router="article" title="Pagar a Banco Agrícola $20.00">
+                <div class="datos-clientes">
+                    <label>Banco Agrícola</label>
+                    <label class="label-right">$20.00 [25%]</label>
+                </div>
+                <form data-progress="75%">
+                    <div class="progress"></div>
+                </form>
+                <label class="fecha-limite">Fecha límite de pago: Viernes, 31 de mayo de 2013</label>
+            </a>
+        </article>
+        <!-- Article de Transacciones del Último mes -->
+        <article id="layout-art-ultimo-mes" class="scroll">
+            <div style="text-align:center;">
+                <h2 class="primer_nivel">Transacciones</h2>
+            </div>
+            <hr style="background: #fff; height: 0.2em;">
+            <div style="text-align:center;">
+                <h1 class="primer_nivel" style="font-size:20px; margin: 0.3em 0 0.3em 0;">Transacciones del Ultimo Mes</h1>
+            </div>
+            <hr style="background: #fff; height: 0.2em;">
+        </article>
+        <!-- View pago a cliente -->
+        <article id="layout-art-pago-a-cliente" data-transition-origin class="scroll">
+            <nav>
+                <a href="#layout-art1" data-router="article"><img src="assets/img/home.png" width="24px"></a>
+            </nav>
+            <h1 class="primer_nivel">Fondo Social para la Vivienda</h1>
+            <h3 class="tercer_nivel">Préstamo Casa</h3>
+            <h3 class="tercer_nivel">Fecha límite de pago: Lunes, 27 de mayo de 2013</h3>
+            <div class="labels">
+                <label class="label-progress">Cuota total:</label>
+                <label class="label-progress label-right">Restante:</label>
+            </div>
+            <div class="datos-clientes">
+                <label>$120.00</label>
+                <label class="label-right">$60.00 [50%]</label>
+            </div>
+            <form data-progress="50%">
+                <div class="progress"></div>
+            <h1 class="primer_nivel">Usted dispone de</h1>
+            <h4 class="saldo"><img src="assets/img/moneda.png" alt="moneda"> <span>124.25</span></h4>
+            <div class="clear space"></div>
+            <fieldset>
+                <label>Monto $</label>
+                <input type="text" name="user_abono" id="user_abono">
+            </fieldset>
+            <input type="submit" name="user_abono_submit" value="Aceptar" onclick="lungoChangeMe('layout-art-pago-a-cliente', 'user_confirmation');">
+            </form>
+        </article>
+        <!-- Confirmación del usuario -->
+        <article id="user_confirmation" class="scroll">
+            <h1 class="title">Por favor, <br> Confirme la transacion</h1>
+            <div class="info_user">
+                <img src="assets/images/carita.png">
+                <div class="name_person">
+                    <span>
+                         <p class="info_state">
+                            Nombre del establecimiento
+                        </p>
+
+                    </span>
+                </div>
+               
+                <div class="clear"></div>
+            </div>
+            <form id="confirmation">
+                <h2 class="simple_text">
+                    Usted desea abonar $60.00 a <br>
+                    Fondo Social para la vivienda
+                </h2>
+                <span class="sub_category">
+                    Prestamo Casa
+                </span>
+                <input type="text" placeholder="Contrasena" id="contra_confirm">
+                <input type="submit" value="Confirmar" id="confirm_submit" onclick="lungoChangeMe('user_confirmation', 'congrat_transfer');">
+            </form>
+        </article>
+        <!-- Congrats -->
+        <article id="congrat_transfer" class="scroll">
+            <img src="assets/images/transaccion.png" class="image">
+            <h2 class="total">
+                     Por $60.00
+                </h2>
+                <h2 class="label" id="time_actual">
+                    <script type="text/javascript">
+                                     
+                    </script>
+                </h2>
+                <label id="transaction">
+                    # de Transaccion
+                </label>
+                <label id="number_complete">
+                                9843534895384
+                </label>    
+        </article>
+        <script>
+            function lungoChangeMe (from, to) {
+                Lungo.Router.article(from, to);
+            }
+        </script>
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
+        <article id="main-page" class="active list indented" ng-controller="LoginControl">
             <span id="page_center">
                 <section id="form_login">
                     <img src="assets/images/logo-vertical-toston-app.png" class="logo_app">
@@ -29,18 +171,63 @@
                 </section>
             </span>
         </article>  
-        <!--  -->
-         <article id="layout-art1" class="" ng-controller="LandinControl">
+        <!-- Bienes y servicios -->
+        <article id="property_services_1" class="list indented scroll"  data-transition="slide" data-router="property_services">
+            <h1 class="text">Compras</h1>
+
+            <p class="text">
+                Por favor, <br/>
+                Ingrese Codigo Toston
+            </p>
+            <form>
+                <input type="text" placeholder="codigo">
+                <input type="submit" value="Buscar" href="#property_services_2">
+            </form>
+        </article>    
+        <article id="property_services_2" data-router="property_services_2" class="scroll">
+                <div class="info_user">
+                    <img src="assets/images/carita.png">
+                    <div class="name_person">
+                        <span>
+                             <p class="info_state">
+                                Nombre del establecimiento
+                            </p>
+
+                        </span>
+                    </div>
+                   
+                    <div class="clear"></div>
+                </div>
+                <form>
+                    <h2 class="input_size account_pay">
+                        <span class"account_pay">
+                            000.00
+                        </span>
+                    </h2>
+                    <h2 class="input_size submit">
+                    <input type="submit" value="Pagar">
+                    </h2>
+                </form>
+        </article>
+        <!-- Ultimas transacciones hechas -->
+         <article id="layout-art-ultimas-transacciones" class="scroll" ng-controller="LandinControl">
             <div style="text-align:center;">
                 <h2 class="primer_nivel">Transacciones</h2>
             </div>
             <hr style="background: #fff; height: 0.2em;">
             <div style="text-align:center;">
-                <h1 class="primer_nivel" style="font-size:20px; margin: 0.3em 0 0.3em 0;">Transacciones del Ultimo Mes</h1>
+                <h1 class="primer_nivel" style="font-size:20px; margin: 0.3em 0 0.3em 0;">Transacciones del Último Mes</h1>
             </div>
             <hr style="background: #fff; height: 0.2em;">
         </article>  
-        <!--  -->
+        <footer>
+            <nav>
+                <a href="#layout-art1" data-router="article"><img width="32px" src="assets/img/home.png" alt="Home"><!-- <img width="32px" src="assets/img/creditos.png" alt="Créditos"> --></a>
+                <a href="#property_services_1" data-router="article"><img width="32px" src="assets/img/moneda.png" alt="Transacción"></a>
+                <a href="#layout-art-ultimo-mes" data-router="article"><img width="32px" src="assets/img/historial.png" alt="Historial"></a>
+                <a href="#layout-art4" data-router="article"><img width="32px" src="assets/img/configuracion.png" alt="Configuracion"></a>
+            </nav>
+        </footer>
     </section>
 
     <!-- Lungo - Dependencies -->

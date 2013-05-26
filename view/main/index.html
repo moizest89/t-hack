@@ -1,4 +1,5 @@
 <header style="text-align: center;"><img src="assets/img/toston-solo-texto.png" height="24px" alt=""></header>
+<!-- Article de Crédito -->
 <article id="layout-art1" class="active">
     <h4 class="saldo"><img src="assets/img/moneda.png" alt="moneda"> <span>4.25</span></h4>
     <h2 class="segundo_nivel">Cuotas Próximas a Vencimiento</h2>
@@ -33,9 +34,18 @@
         <label class="fecha-limite">Fecha límite de pago: Viernes, 31 de mayo de 2013</label>
     </a>
 </article>
-<article id="layout-art2"></article>
-<article id="layout-art3"></article>
-<article id="layout-art4"></article>
+<!-- Article de Transacciones del Último mes -->
+<article id="layout-art-ultimo-mes" class="active">
+    <div style="text-align:center;">
+        <h2 class="primer_nivel">Transacciones</h2>
+    </div>
+    <hr style="background: #fff; height: 0.2em;">
+    <div style="text-align:center;">
+        <h1 class="primer_nivel" style="font-size:20px; margin: 0.3em 0 0.3em 0;">Transacciones del Ultimo Mes</h1>
+    </div>
+    <hr style="background: #fff; height: 0.2em;">
+</article>
+<!-- View pago a cliente -->
 <article id="layout-art-pago-a-cliente" data-transition-origin>
     <nav>
         <a href="#layout-art1" data-router="article"><img src="assets/img/home.png" width="24px"></a>
@@ -63,6 +73,54 @@
     <input type="submit" name="user_abono_submit" value="Aceptar" onclick="lungoChangeMe('layout-art-pago-a-cliente', 'layout-art-transaccion-exitosa');">
     </form>
 </article>
+<!-- Confirmación del usuario -->
+<article id="user_confirmation" class="active">
+    <h1 class="title">Por favor, <br> Confirme la transacion</h1>
+    <div class="info_user">
+        <img src="assets/images/carita.png">
+        <div class="name_person">
+            <span>
+                 <p class="info_state">
+                    Nombre del establecimiento
+                </p>
+
+            </span>
+        </div>
+       
+        <div class="clear"></div>
+    </div>
+    <form id="confirmation">
+    <h2 class="simple_text">
+        Usted desea abonar $60.00 a <br>
+        Fondo Social para la vivienda
+    </h2>
+    <span class="sub_category">
+        Prestamo Casa
+    </span>
+    
+        <input type="text" placeholder="Contrasena" id="contra_confirm">
+
+        <input type="submit" value="Confirmar" id="confirm_submit">
+    </form>
+</article>
+<!-- Congrats -->
+<article id="congrat_transfer" class="active">
+    <img src="assets/images/transaccion.png" class="image">
+    <h2 class="total">
+             Por $00.00
+        </h2>
+        <h2 class="label" id="time_actual">
+            <script type="text/javascript">
+                             
+            </script>
+        </h2>
+        <label id="transaction">
+            # de Transaccion
+        </label>
+        <label id="number_complete">
+                        9843534895384
+        </label>    
+</article>
 <script>
     function lungoChangeMe (from, to) {
         console.log("Vamonos");
@@ -77,3 +135,34 @@
         <a href="#layout-art4" data-router="article"><img width="32px" src="assets/img/configuracion.png" alt="Configuracion"></a>
     </nav>
 </footer>
+
+<!--  -->
+<!--  -->
+<!--  -->
+
+
+<header data-title="Tostón APP"></header>
+<article id="main-page" class="active list indented scroll" ng-controller="LoginControl">
+    <span id="page_center">
+        <section id="form_login">
+            <img src="assets/images/logo-vertical-toston-app.png" class="logo_app">
+            <form ng-submit="entrar()" id="login_form">
+                <input type="text" placeholder="Usuario" name="user[plataform_id]">
+                <input type="password" placeholder="Contrasena" name="user[password]">
+                <input type="submit" value="Iniciar Sesion">
+            </form> 
+        </section>
+    </span>
+</article>  
+<!--  -->
+ <article id="layout-art1" class="" ng-controller="LandinControl">
+    <div style="text-align:center;">
+        <h2 class="primer_nivel">Transacciones</h2>
+    </div>
+    <hr style="background: #fff; height: 0.2em;">
+    <div style="text-align:center;">
+        <h1 class="primer_nivel" style="font-size:20px; margin: 0.3em 0 0.3em 0;">Transacciones del Ultimo Mes</h1>
+    </div>
+    <hr style="background: #fff; height: 0.2em;">
+</article>  
+<!--  -->
