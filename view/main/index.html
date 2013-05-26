@@ -60,11 +60,14 @@
         <label>Monto $</label>
         <input type="text" name="user_abono" id="user_abono">
     </fieldset>
-    <input type="submit" name="user_abono_submit" value="Aceptar" onclick="">
+    <input type="submit" name="user_abono_submit" value="Aceptar" onclick="lungoChangeMe('layout-art-pago-a-cliente', 'layout-art-transaccion-exitosa');">
     </form>
 </article>
 <script>
-    Lungo.router.article("layout-art1", "layout-art-pago-a-cliente");
+    function lungoChangeMe (from, to) {
+        console.log("Vamonos");
+        Lungo.Router.article(from, to);
+    }
 </script>
 <footer>
     <nav>
