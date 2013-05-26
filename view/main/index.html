@@ -1,35 +1,21 @@
-<section id="layout" data-transition="slide" ng-app>
-    <header data-title="Layout" class="extended">
-        <nav>
-            <a href="#back" data-router="section" data-icon="home"></a>
-        </nav>
-        <nav class="right">
-            <a href="#splash" data-router="section" data-async="app/sections/splash.html" data-icon="lock" class="button"></a>
-        </nav>
-    </header>
-
-    <nav class="groupbar">
-        <a href="#layout-art1" data-router="article" data-label="Profile" class="active"></a>
-        <a href="#layout-art2" data-router="article" data-label="Inbox" data-count="19"></a>
-        <a href="#layout-art3" data-router="article" data-label="Map"></a>
-        <a href="#layout-art4" data-router="article" data-label="Settings"></a>
+<header data-title="Tostón APP"></header>
+<article id="layout-art1" class="active">
+    <h4 class="saldo"><img src="assets/img/moneda.png" alt="moneda"> <span>xxx.xx</span></h4>
+    <h2 class="segundo_nivel">Cuotas Próximas a Vencimiento</h2>
+    <hr style="background: #fff; height: 0.2em;">
+    <label class="label-progress">Prestamo Casa</label>
+    <form data-progress="25%">
+        <div class="progress"></div>
+    </form>
+</article>
+<article id="layout-art2"></article>
+<article id="layout-art3"></article>
+<article id="layout-art4"></article>
+<footer>
+    <nav>
+        <a href="#layout-art1" data-router="article" data-icon="home" class="active"></a>
+        <a href="#layout-art2" data-router="article" data-icon="inbox" data-count="80"></a>
+        <a href="#layout-art3" data-router="article" data-icon="compass"></a>
+        <a href="#layout-art4" data-router="article" data-icon="settings"></a>
     </nav>
-
-    <footer>
-        <nav>
-            <a href="#layout-art1" data-router="article" data-icon="home" class="active"></a>
-            <a href="#layout-art2" data-router="article" data-icon="inbox" data-count="80"></a>
-            <a href="#layout-art3" data-router="article" data-icon="compass"></a>
-            <a href="#layout-art4" data-router="article" data-icon="settings"></a>
-        </nav>
-    </footer>
-    <article id="layout-art1" class="active">
-        
-    </article>
-    <article id="layout-art2"></article>
-    <article id="layout-art3"></article>
-    <article id="layout-art4"></article>
-</section>
-<script>
-    $("#layout-art1").html("hola"); 
-</script>
+</footer>
