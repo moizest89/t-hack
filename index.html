@@ -23,40 +23,35 @@
 </head>
 
 <body class="app">
-    <section id="layout" data-transition="slide" class="active">
+    <section id="layout" data-transition="slide" ng-controller="LoginControl"> 
         <header data-title="Tostón APP"></header>
-        <!--  -->
-<!--             <article id="property_services_1" class="list indented active"  data-transition="slide" data-router="property_services">
-                <h1 class="text">Compras</h1>
-
-                <p class="text">
-                    Por favor, <br/>
-                    Ingrese Codigo Toston
-                </p>
-                <input type="text" placeholder="codigo">
-                <input type="submit" value="Buscar" href="#property_services_2">
-                
-            </article> -->
-            <article id="property_services_2" class="list indented" data-transition="slide" data-router="property_services">
-                
-            </article>
-        <!--  -->
-        <footer>
-            <nav>
-                <a href="#layout-art1" data-router="article" data-icon="home" class="active"></a>
-                <a href="#layout-art2" data-router="article" data-icon="inbox"></a>
-                <a href="#layout-art3" data-router="article" data-icon="compass"></a>
-                <a href="#layout-art4" data-router="article" data-icon="settings"></a>
-            </nav>
-        </footer>
+        <article id="main-page" class="active list indented scroll" >
+            <span id="page_center">
+                <section id="form_login">
+                    <img src="assets/images/logo-vertical-toston-app.png" class="logo_app">
+                    <form ng-submit="entrar()" id="login_form">
+                        <input type="text" placeholder="Usuario" name="user[plataform_id]">
+                        <input type="password" placeholder="Contrasena" name="user[password]">
+                        <input type="submit" value="Iniciar Sesion">
+                    </form> 
+                </section>
+            </span>
+        </article>       
     </section>
 
     <!-- Lungo - Dependencies -->
     <script src="assets/js/quojs/quo.js"></script>
     <script src="assets/js/lungo/lungo.js"></script>
     <script src="assets/js/jquery-1.9.1.min.js"></script>
-    <script src="assets/js/main_script.js"></script>
+    <script>
+        $(function() {
+            $.support.cors = true;
+        })
+    </script>
     <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/main_script.js"></script>
+    <script src="controller/main.js"></script>
+
     
 
     <!-- Lungo - Sandbox App -->
