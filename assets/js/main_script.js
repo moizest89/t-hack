@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	 height_form_index();
+	 var d = new Date();
+      $('h2#time_actual').text(d);
 });
 
 $(window).resize(function(){
@@ -15,3 +17,4 @@ function height_form_index () {
 		height:height_page
 	});
 }
+
