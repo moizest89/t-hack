@@ -17,6 +17,7 @@
 <body class="app">
     <section id="layout" data-transition="slide"> 
         <header data-title="Tostón APP"></header>
+        <!-- Login -->
         <article id="main-page" class="active list indented scroll" ng-controller="LoginControl">
             <span id="page_center">
                 <section id="form_login">
@@ -29,17 +30,37 @@
                 </section>
             </span>
         </article>  
-        <!--  -->
-         <article id="layout-art1" class="" ng-controller="LandinControl">
-            <div style="text-align:center;">
-                <h2 class="primer_nivel">Transacciones</h2>
-            </div>
+        <!-- Termina Login -->
+        <!-- Landing -->
+
+        <article id="lading-page" ng-model="LandingControl">
+            <h4 class="saldo"><img src="assets/img/moneda.png" alt="moneda"> <span><!--amount--></span></h4>
+            <h2 class="segundo_nivel">Cuotas Próximas a Vencimiento {{1+1}} {{hola}} {{data.accounts.amount}}</h2>
             <hr style="background: #fff; height: 0.2em;">
-            <div style="text-align:center;">
-                <h1 class="primer_nivel" style="font-size:20px; margin: 0.3em 0 0.3em 0;">Transacciones del Ultimo Mes</h1>
+
+            <div id="content-creditos">
+                <din class="item-creditos">
+                    <div class="labels">
+                        <label class="label-progress">Préstamo Casa</label>
+                        <label class="label-progress label-right">Restante</label>
+                    </div>
+                    <a href="#layout-art-pago-a-cliente" data-router="article" title="Pagar a Fondo Social para la Vivienda $60.00">
+                        <div class="datos-clientes">
+                            <label>Fondo Social para la Vivienda</label>
+                            <label class="label-right"><!--fee--> [<!--porcentaje-->%]</label>
+                        </div>
+                        <div class="contendedor-barra">
+                            <div class="barra">
+
+                            </div>
+                        </div>
+                        <label class="fecha-limite">Fecha límite de pago: Lunes, 27 de mayo de 2013</label>
+                    </a>
+                    <hr style="background: #fff; height: 0.2em;">
+                </div>
             </div>
-            <hr style="background: #fff; height: 0.2em;">
-        </article>  
+        </article>
+        <!-- Termina Landing -->
         <!--  -->
     </section>
 
