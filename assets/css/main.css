@@ -35,6 +35,9 @@ footer, header, hgroup, menu, nav, section {
 	background: rgba(188,188,188,0.8); 
     //@include rounded(6px);
 }
+footer nav a img {
+	margin-top: 0.5em;
+}
 ol, ul {
 	list-style: none;
 }
@@ -48,6 +51,26 @@ q:before, q:after {
 }
 img{
 	border:none;
+}
+/*button*/
+input[type=submit] {
+	padding: 6px 0;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	border: 3px solid #FDB93F;
+	text-align: center;
+	background: #FDB93F;
+	color: #FFF;
+	font-size: 37px;
+	font-weight: bold;
+	font-size: 19px;
+	width: 30%;
+	display: block;
+	cursor: pointer;
+	margin: 40px auto;	
 }
 table {
 	border-collapse: collapse;
@@ -77,6 +100,9 @@ article[id^=layout-art] {
 }
 .clear{
 	clear:both;
+}
+.space {
+	margin: 1em;
 }
 .fecha-limite {
 	margin-bottom: 1em;
@@ -132,6 +158,9 @@ article[id^=layout-art] {
 }
 #layout article {
 	background: #3d85c6;
+}
+#layout-art-pago-a-cliente h1,h2,h3,h4 {
+	text-align: center;
 }
 /**/
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {

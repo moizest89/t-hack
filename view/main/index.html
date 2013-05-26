@@ -1,4 +1,4 @@
-<header data-title="Tostón APP"></header>
+<header style="text-align: center;"><img src="assets/img/toston-solo-texto.png" height="24px" alt=""></header>
 <article id="layout-art1" class="active">
     <h4 class="saldo"><img src="assets/img/moneda.png" alt="moneda"> <span>4.25</span></h4>
     <h2 class="segundo_nivel">Cuotas Próximas a Vencimiento</h2>
@@ -7,7 +7,7 @@
         <label class="label-progress">Préstamo Casa</label>
         <label class="label-progress label-right">Restante</label>
     </div>
-    <a ng-controller="ClientesControl" href="#layout-art-pago-a-cliente" data-router="article" title="Pagar a Fondo Social para la Vivienda $60.00">
+    <a href="#layout-art-pago-a-cliente" data-router="article" title="Pagar a Fondo Social para la Vivienda $60.00">
         <div class="datos-clientes">
             <label>Fondo Social para la Vivienda</label>
             <label class="label-right">$60.00 [50%]</label>
@@ -22,7 +22,7 @@
         <label class="label-progress">Préstamo Carro</label>
         <label class="label-progress label-right">Restante</label>
     </div>
-    <a ng-controller="ClientesControl" href="#layout-art-pago-a-cliente" data-router="article" title="Pagar a Banco Agrícola $20.00">
+    <a href="#layout-art-pago-a-cliente" data-router="article" title="Pagar a Banco Agrícola $20.00">
         <div class="datos-clientes">
             <label>Banco Agrícola</label>
             <label class="label-right">$20.00 [25%]</label>
@@ -36,7 +36,10 @@
 <article id="layout-art2"></article>
 <article id="layout-art3"></article>
 <article id="layout-art4"></article>
-<article id="layout-art-pago-a-cliente" data-transition="slide">
+<article id="layout-art-pago-a-cliente" data-transition-origin>
+    <nav>
+        <a href="#layout-art1" data-router="article"><img src="assets/img/home.png" width="24px"></a>
+    </nav>
     <h1 class="primer_nivel">Fondo Social para la Vivienda</h1>
     <h3 class="tercer_nivel">Préstamo Casa</h3>
     <h3 class="tercer_nivel">Fecha límite de pago: Lunes, 27 de mayo de 2013</h3>
@@ -50,16 +53,24 @@
     </div>
     <form data-progress="50%">
         <div class="progress"></div>
-    </form>
     <h1 class="primer_nivel">Usted dispone de</h1>
     <h4 class="saldo"><img src="assets/img/moneda.png" alt="moneda"> <span>4.25</span></h4>
-    <img src="assets/img/moneda.png" alt="moneda"><input type="text" name="user_abono" id="user_abono" placeholder="Abono"><input type="button" name="user_abonar" value="Abonar">
+    <div class="clear space"></div>
+    <fieldset>
+        <label>Monto $</label>
+        <input type="text" name="user_abono" id="user_abono">
+    </fieldset>
+    <input type="submit" name="user_abono_submit" value="Aceptar" onclick="">
+    </form>
 </article>
+<script>
+    Lungo.router.article("layout-art1", "layout-art-pago-a-cliente");
+</script>
 <footer>
     <nav>
-        <a href="#layout-art1" data-router="article" data-icon="home" class="active"></a>
-        <a href="#layout-art2" data-router="article" data-icon="inbox" data-count="80"></a>
-        <a href="#layout-art3" data-router="article" data-icon="compass"></a>
-        <a href="#layout-art4" data-router="article" data-icon="settings"></a>
+        <a href="#layout-art1" data-router="article"><img width="32px" src="assets/img/home.png" alt="Home"><!-- <img width="32px" src="assets/img/creditos.png" alt="Créditos"> --></a>
+        <a href="#layout-art2" data-router="article"><img width="32px" src="assets/img/moneda.png" alt="Transacción"></a>
+        <a href="#layout-art3" data-router="article"><img width="32px" src="assets/img/historial.png" alt="Historial"></a>
+        <a href="#layout-art4" data-router="article"><img width="32px" src="assets/img/configuracion.png" alt="Configuracion"></a>
     </nav>
 </footer>
