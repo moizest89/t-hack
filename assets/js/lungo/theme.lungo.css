@@ -555,8 +555,11 @@ form input[type=range]::-webkit-slider-thumb::after,
 form .progress .bar,
 .form .progress .bar {
   background-color: #ddd;
+  border-radius: 5px;
+  height: 20px;
 }
 form .progress .bar .value,
 .form .progress .bar .value {
   background-color: #fdb940;
+  border-radius: 5px;
 }
