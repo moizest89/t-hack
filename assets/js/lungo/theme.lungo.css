@@ -15,6 +15,7 @@ body {
   font-size: 13px;
   line-height: 1.3em;
   letter-spacing: -0.05em;
+  text-shadow: 1px 1px 3px #777;
 }
 .theme,
 li.theme,
@@ -34,7 +35,7 @@ a.theme:active {
 }
 /* -------------------------- LAYOUT COLORS -------------------------- */
 section > header {
-  background-color: #0093d5;
+  background-color: #FAA61A;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #03b1ff, inset 0 -1px 0 #007db5;
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #03b1ff, inset 0 -1px 0 #007db5;
   box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #03b1ff, inset 0 -1px 0 #007db5;
@@ -556,5 +557,5 @@ form .progress .bar,
 }
 form .progress .bar .value,
 .form .progress .bar .value {
-  background-color: #03b1ff;
+  background-color: #fdb940;
 }
