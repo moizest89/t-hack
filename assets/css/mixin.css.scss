@@ -1,0 +1,97 @@
+/* ============ Main Function ============*/
+
+/*Main.css.scss*/
+// @mixin background-image($position:top, $color:"#E6E6E6 0,#F0F0F0 100%"){
+// 	background-image: -webkit-linear-gradient($position $color);
+// 	background-image: -moz-linear-gradient($position $color);
+// 	background-image: -o-linear-gradient($position $color);
+// 	background-image: -ms-linear-gradient($position $color);
+// 	background-image: linear-gradient($position $color);
+// }
+
+@mixin opacity($n:1,$ie:100){
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="$n")";
+	moz-opacity:$n;
+	filter: alpha(opacity=$ie);
+	opacity:$n;
+}
+@mixin textShadow($px:2px 1px 1px,$color:#000000){
+	text-shadow: $px $color;
+	filter: dropshadow(color=$color, offx=2, offy=2);
+}
+@mixin rounded($rounded:5px){
+	-webkit-border-radius:$rounded;
+	-khtml-border-radius:$rounded;
+	-moz-border-radius:$rounded;
+	-o-border-radius:$rounded;
+	border-radius:$rounded;
+}
+@mixin spriteImages($padding:10px,$position:-10px -10px,$color:transparent){
+	padding:$padding;
+	background:$color url('../img/sprite.png') $position no-repeat;
+}
+
+@mixin sampleSprite($x,$y){
+	background:transparent image-url('../img/sprite.png') $x $y no-repeat;
+}
+
+/**/
+@mixin backgroundImage($imageName:no-logo,$format:png, $repeat:no-repeat,$color:transparent){
+	background:$color url(img/system/$imageName$format) $repeat !important;
+}
+/*store.scc.scss*/
+@mixin tableCell(){
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+@mixin animation($position:all, $time:0.5s, $move:ease-in-out){
+  -webkit-transition: $position $time $move;
+  -moz-transition: $position $time $move;
+  -o-transition: $position $time $move;
+  -ms-transition: $position $time $move;
+  transition: $position $time $move;
+}
+@mixin transformAnimation($scale:1.2){
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	-o-transform: scale($scale);
+	-ms-transform: scale($scale);
+	transform: scale($scale);
+}
+@mixin animationdelay($time:0.1s){
+	-webkit-transition-delay: $time;
+	-moz-transition-delay: $time;
+	-o-transition-delay: $time;
+	-ms-transition-delay: $time;
+	transition-delay: $time;
+}
+
+@mixin boxShadow($size:1px 1px 1px, $color:#333){
+	-webkit-box-shadow: $size $color;
+	-moz-box-shadow: $size $color;
+	box-shadow: $size $color;
+}
+@mixin rotate($rotate:-180deg){
+	-webkit-transform:rotate($rotate);
+	-moz-transform:rotate($rotate);
+	-o-transform:rotate($rotate);
+	-ms-transform:rotate($rotate);
+	transform:rotate($rotate);
+}
+@mixin boderRadius($rad){
+	-webkit-border-radius:$rad;
+	-moz-border-radius:$rad;
+	border-radius:$rad;
+}
+@mixin rounded_Degradiant(){
+	background: #2d9fd3; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #2d9fd3 0%, #03528c 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#2d9fd3), color-stop(100%,#03528c)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #2d9fd3 0%,#03528c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #2d9fd3 0%,#03528c 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #2d9fd3 0%,#03528c 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #2d9fd3 0%,#03528c 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d9fd3', endColorstr='#03528c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
