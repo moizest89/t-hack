@@ -24,19 +24,7 @@
 
 <body class="app">
     <section id="layout" data-transition="slide" ng-controller="LoginControl"> 
-        <header data-title="Tostón APP"></header>
-        <article id="main-page" class="active list indented scroll" >
-            <span id="page_center">
-                <section id="form_login">
-                    <img src="assets/images/logo-vertical-toston-app.png" class="logo_app">
-                    <form ng-submit="entrar()" id="login_form">
-                        <input type="text" placeholder="Usuario" name="user[plataform_id]">
-                        <input type="password" placeholder="Contrasena" name="user[password]">
-                        <input type="submit" value="Iniciar Sesion">
-                    </form> 
-                </section>
-            </span>
-        </article>       
+
     </section>
 
     <!-- Lungo - Dependencies -->
@@ -44,9 +32,8 @@
     <script src="assets/js/lungo/lungo.js"></script>
     <script src="assets/js/jquery-1.9.1.min.js"></script>
     <script>
-        $(function() {
-            $.support.cors = true;
-        })
+    $(function() {})
+        $.support.cors = true;
     </script>
     <script src="assets/js/angular.min.js"></script>
     <script src="assets/js/main_script.js"></script>
