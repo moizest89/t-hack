@@ -61,7 +61,69 @@ section#form_login{
 		}
 	}
 }
+#property_services_2{
+	div.info_user{
+		width:361px;
+		height:156px;
+		margin:45px auto 0 auto;
+		img{
+			float:left;
+		}
+		div.name_person{
+			width:200px;
+			height:156px;
+			float:left;
+			margin-left:5px;
+			span{
+				display:table-cell;
+				vertical-align:middle;
+				text-align:left;	
+				width:200px;
+				height:156px;
+			}
+		}
+		p.info_state{
+			font-size:27px;
+			font-weight:bold;
+			float:left;
+			line-height:30px;
+		}
+	}
+	h2.input_size{
+		width:100%;
+		text-align:center;
+		color:#FFF;
+	}
+	h2.input_size.account_pay{
+		margin-top:60px;
+		span{
+			background:#FDB93F;
+			font-size:27px;
+			font-weight:bold;
+			width:20%;
+			display:block;
+			margin:0 auto;
+			padding:17px 0;
+			@include rounded(4px);
+		}
+	}h2.input_size.submit{
+		margin-top:30px;
+		input[type="submit"]{
+			background:#FDB93F;
+			font-size:27px;
+			font-weight:bold;
+			border:none;
+			width:20%;
+			display:block;
+			margin:0 auto;
+			padding:8px 0;
+			color:#FFF;
+			cursor:pointer;
+			@include rounded(4px);
+		}
+	}
 
+}
 article#property_services_1{
 	h1.text{
 		width:100%;
@@ -104,5 +166,125 @@ article#property_services_1{
 		display:block;
 		cursor:pointer;
 		margin:40px auto;
+	}
+}//article#property_services_1
+
+article#user_confirmation{
+	input#contra_confirm{
+		padding:6px 0;
+		text-indent:15px;
+		@include rounded(4px);
+		border:3px solid #FDB93F;
+		font-size:22px;
+		width:95%;
+		display:block;
+		margin:30px auto 0 auto;
+	}
+	input#confirm_submit{
+		padding:6px 0;
+		@include rounded(4px);
+		border:3px solid #FDB93F;
+		text-align:center;
+		background:#FDB93F;
+		color:#FFF;
+		font-size:37px;
+		font-weight:bold;
+		font-size:19px;
+		width:20%;
+		display:block;
+		cursor:pointer;
+		margin:40px auto;
+	}
+	h1.title{
+			display:block;
+			width:361px;
+			margin:0 auto;
+			font-size:27px;
+			margin-top:30px;
+			text-align:center;	
+			line-height:32px;
+			font-weight:bold;
+		}
+	h2.simple_text{
+		width:100%;
+		text-align:center;
+		font-weight:bold;
+		font-size:24px;
+		margin-top:15px;
+		line-height:30px;
+	}
+	span.sub_category{
+		width:100%;
+		text-align:center;
+		font-weight:bold;
+		font-size:17px;
+		margin-top:15px;
+		display:block;
+	}
+	div.info_user{
+		width:361px;
+		height:156px;
+		margin:45px auto 0 auto;
+		img{
+			float:left;
+		}
+		
+		div.name_person{
+			width:200px;
+			height:156px;
+			float:left;
+			margin-left:5px;
+			span{
+				display:table-cell;
+				vertical-align:middle;
+				text-align:left;	
+				width:200px;
+				height:156px;
+			}
+		}
+		p.info_state{
+			font-size:27px;
+			font-weight:bold;
+			float:left;
+			line-height:30px;
+		}
+	}
+}
+
+article#congrat_transfer{
+	position:relative;
+	img.image{
+		width:350px;
+		margin:40px auto 30px auto;
+		display:block;
+	}
+	h2.total{
+		width:100%;
+		font-size:27px;
+		font-weight:bold;
+		text-align:center;
+	}
+	h2.label{
+		width:100%;
+		font-size:25px;
+		font-weight:bold;
+		text-align:center;
+		margin-top:7px;
+	}
+	label#transaction{
+		width:100%;
+		font-size:20px;
+		font-weight:bold;
+		text-align:center;
+		margin-top:17px;
+		display:block;
+	}
+	label#number_complete{
+		width:100%;
+		display:block;
+		font-size:26px;
+		font-weight:bold;
+		text-align:center;
+		margin-top:17px;
 	}
 }
